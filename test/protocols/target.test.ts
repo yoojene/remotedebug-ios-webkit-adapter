@@ -26,7 +26,7 @@ function CreateTarget(): Target {
 suite('Proxy/Protocol/Target', () => {
     const targetUrl = 'ws://localhost:8080';
     const toolsUrl = 'ws://localhost:9090';
-    let loggerMock: Mock<LoggerMock>;
+    let loggerMock: any;
     let targetServer: any;
     let toolsServer: any;
     let toolSocket: any;
@@ -58,7 +58,7 @@ suite('Proxy/Protocol/Target', () => {
         // SocketIO has most of them minus the OPEN/CLOSED boolean. We only care about OPEN so lets just add this functionality on here.
         SocketIO.OPEN = 1;
 
-        loggerMock = Mock.ofType(new LoggerMock(), MockBehavior.Loose);
+        loggerMock = Mock.ofType(new LoggerMock() as any, MockBehavior.Loose);
         mockery.registerMock('../../shell/logger', { Logger: loggerMock.object });
 
         targetServer = new Server(targetUrl);

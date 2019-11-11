@@ -49,11 +49,11 @@ export class Target extends EventEmitter {
 
         // Create a connection to the real websocket endpoint
         this._wsTarget = new WebSocket(url);
-        this._wsTarget.on('error', (err) => {
+        this._wsTarget.on('error', (err: any) => {
             Logger.error(err);
         });
 
-        this._wsTarget.on('message', (message) => {
+        this._wsTarget.on('message', (message: any) => {
             this.onMessageFromTarget(message);
         });
         this._wsTarget.on('open', () => {

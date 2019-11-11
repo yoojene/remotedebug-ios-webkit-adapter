@@ -17,13 +17,14 @@
     "@types/express": "^4.0.34",
     "@types/mocha": "^2.2.40",
     "@types/optimist": "0.0.29",
+    "@types/ws": "6.0.3",
     "child-process-promise": "^2.2.0",
     "debug": "^2.6.3",
     "express": "^4.14.0",
     "optimist": "^0.6.1",
     "request": "^2.72.0",
     "which": "^1.2.12",
-    "ws": "^1.1.0"
+    "ws": "7.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -35,7 +36,7 @@
     "mock-socket": "^3.0.1",
     "mockery": "^1.7.0",
     "tslint": "^3.15.1",
-    "typemoq": "0.0.6",
-    "typescript": "2.2.2"
+    "typemoq": "2.1.0",
+    "typescript": "3.5.3"
   }
 }
