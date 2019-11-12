@@ -149,8 +149,7 @@ export class ProxyServer extends EventEmitter {
     }
 
     private onWSSConnection(ws: any, req: any): void {
-        // console.log(JSON.stringify(ws))
-        console.log(JSON.stringify(req))
+
         const url = req.url;
 
         debug('server.ws.onWSSConnection', url)
